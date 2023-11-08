@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-url = "https://trafficnews.bg/"
+url = "https://trafficnews.bg/plovdiv/"
 response = requests.get(url)
 
 if response.status_code == 200:
@@ -13,3 +13,5 @@ if response.status_code == 200:
         print(h3.get_text())
 else:
     print("Failed to retrieve the webpage. Status code:", response.status_code)
+
+#later for that project I would like to make it so it gives you all the new articles within 24 hours
